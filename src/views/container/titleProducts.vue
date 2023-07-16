@@ -3,8 +3,8 @@
     <div class="title-product">
       <h3>{{ title }} <br />{{ title2 }}</h3>
     </div>
-    <div class="ver-todo">
-      <a href="#tab1">Ver Todo</a>
+    <div class="ver-todo ">
+      <a class="no-underline" href="#tab1">Ver Todo</a>
     </div>
   </div>
 </template>
@@ -34,6 +34,5 @@ const props = defineProps({
     }
     .ver-todo{
       color: #0078d4; 
-      text-decoration: underline
     }
 </style>
