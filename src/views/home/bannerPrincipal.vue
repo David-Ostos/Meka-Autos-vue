@@ -66,7 +66,7 @@ const items = ref([
         data-te-carousel-item
         data-te-carousel-active
       >
-        <img :src="img3" class="block w-full max-h-[350px] object-cover" alt="" />
+        <img :src="img3" class="block w-full max-h-36 md:max-h-[350px] object-cover" alt="" />
       </div>
       <div
         v-for="item in items"
@@ -75,7 +75,7 @@ const items = ref([
         data-te-carousel-fade
         data-te-carousel-item
       >
-        <img :src="item.src" class="block w-full object-cover max-h-[350px]" :alt="item.alt" />
+        <img :src="item.src" class="block w-full object-cover max-h-36 md:max-h-[350px]" :alt="item.alt" />
       </div>
     </div>
 

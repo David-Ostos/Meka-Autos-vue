@@ -130,7 +130,7 @@ header {
 
 <template>
   <header>
-    <div class="container-header container ">
+    <div class="container-header px-4 sm:container sm:p-0 ">
       <div class="container-nav ">
         <div class="">
           <a href="#" class="btn-header" @click="activeNav">

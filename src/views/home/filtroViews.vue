@@ -8,17 +8,17 @@
         aria-expanded="false"
         aria-controls="collapse"
       >
-        <p class="uppercase text-white md:max-w-[90%] text-xl md:text-4xl text-center">
+        <p class="uppercase text-white max-w-[84%] text-xl md:text-4xl text-center">
           encuentra los repuestos para tu vehiculo
         </p>
         <button
           class="font-medium leading-normal text-white self-baseline"
         >
-          <i class="fa-solid fa-chevron-down" style="color: #ffffff"></i>
+          <i class="fa-solid fa-chevron-down md:text-xl sm:text-base" style="color: #ffffff"></i>
         </button>
       </div>
       <div
-        class="!visible hidden m-[1.25rem_auto_0] lg:my-0 lg:block lg:min-w-[1024px]"
+        class="!visible hidden sm:px-0 px-4 m-[1.25rem_auto_0] lg:my-0 lg:block lg:min-w-[1024px]"
         id="collapse"
         data-te-collapse-item
       >
