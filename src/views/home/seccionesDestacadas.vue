@@ -1,9 +1,9 @@
 <template>
   <div class="container mx-auto">
-    <div class="seciones-destacadas">
+    <div class="seciones-destacadas md:flex-col md:w-full">
       <!-- container -->
       <div class="shop">
-        <div class="shop-img">
+        <div class="shop-img lg:w-1/3">
           <img src="../../img/camione/camione2.jpg" alt="">
         </div>
         <div class="shop-body">
@@ -50,7 +50,6 @@
 }
 
 .shop {
-  width: 33.333%;
   position: relative;
   overflow: hidden;
   height: fit-content;

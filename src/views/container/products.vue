@@ -1,6 +1,5 @@
 <!-- eslint-disable vue/multi-word-component-names -->
 <script setup lang="ts">
-
 // eslint-disable-next-line @typescript-eslint/no-unused-vars
 const props = defineProps({
   id: Number,
@@ -9,9 +8,8 @@ const props = defineProps({
   condicion: String,
   category: String,
   title: String,
-  price: String,
-})
-
+  price: String
+});
 </script>
 
 <style lang="scss" scoped>
@@ -23,7 +21,7 @@ const props = defineProps({
 } */
 
 .product:hover {
-  box-shadow: 0px 0px 6px 0px #E4E7ED, 0px 0px 0px 2px #0078d4;
+  box-shadow: 0px 0px 6px 0px #e4e7ed, 0px 0px 0px 2px #0078d4;
 }
 
 .product {
@@ -31,36 +29,36 @@ const props = defineProps({
   transition: 0.2s all;
   position: relative;
   top: 3px;
-    .product-label {
-      position: absolute;
-      top: 15px;
-      right: 15px;
+  .product-label {
+    position: absolute;
+    top: 15px;
+    right: 15px;
 
-      >span {
-        margin: 0 2px;
-        border: 2px solid;
-        padding: 2px 10px;
-        font-size: 12px;
-      }
+    > span {
+      margin: 0 2px;
+      border: 2px solid;
+      padding: 2px 10px;
+      font-size: 12px;
+    }
 
-      >span.sale {
-        background-color: #FFF;
-        border-color: #0078d4;
-        color: #0078d4;
-      }
+    > span.sale {
+      background-color: #fff;
+      border-color: #0078d4;
+      color: #0078d4;
+    }
 
-      >span.new {
-        background-color: #0078d4;
-        border-color: #0078d4;
-        color: #FFF;
-      }
+    > span.new {
+      background-color: #0078d4;
+      border-color: #0078d4;
+      color: #fff;
     }
   }
+}
 
 .product .product-body {
   position: relative;
   padding: 15px;
-  background-color: #FFF;
+  background-color: #fff;
   text-align: center;
   z-index: 3;
   box-sizing: border-box;
@@ -69,21 +67,22 @@ const props = defineProps({
 .product .product-body .product-category {
   text-transform: uppercase;
   font-size: 12px;
-  color: #8D99AE;
+  color: #8d99ae;
 }
 
 .product .product-body .product-name {
   text-transform: uppercase;
   font-size: 14px;
-  min-height: 42px;
+  height: 42px;
+  overflow: hidden;
 }
 
-.product .product-body .product-name>a {
+.product .product-body .product-name > a {
   font-weight: 700;
 }
 
-.product .product-body .product-name>a:hover,
-.product .product-body .product-name>a:focus {
+.product .product-body .product-name > a:hover,
+.product .product-body .product-name > a:focus {
   color: #0078d4;
 }
 
@@ -95,7 +94,7 @@ const props = defineProps({
 .product .product-body .product-price .product-old-price {
   font-size: 70%;
   font-weight: 400;
-  color: #8D99AE;
+  color: #8d99ae;
 }
 
 .product .product-body .product-rating {
@@ -104,21 +103,21 @@ const props = defineProps({
   height: 20px;
 }
 
-.product .product-body .product-rating>i {
+.product .product-body .product-rating > i {
   position: relative;
   width: 25px;
   margin-right: -4px;
-  background: #FFF;
-  color: #E4E7ED;
+  background: #fff;
+  color: #e4e7ed;
   z-index: 2;
 }
 
-.product .product-body .product-rating>i.fa-star {
+.product .product-body .product-rating > i.fa-star {
   color: #ef233c;
 }
 
 .product .product-body .product-rating:after {
-  content: "";
+  content: '';
   position: absolute;
   top: 50%;
   left: 0;
@@ -127,10 +126,10 @@ const props = defineProps({
   -ms-transform: translateY(-50%);
   transform: translateY(-50%);
   height: 1px;
-  background-color: #E4E7ED;
+  background-color: #e4e7ed;
 }
 
-.product .product-body .product-btns>button {
+.product .product-body .product-btns > button {
   position: relative;
   width: 40px;
   height: 40px;
@@ -141,13 +140,13 @@ const props = defineProps({
   transition: 0.2s all;
 }
 
-.product .product-body .product-btns>button:hover {
-  background-color: #E4E7ED;
+.product .product-body .product-btns > button:hover {
+  background-color: #e4e7ed;
   color: #0078d4;
   border-radius: 50%;
 }
 
-.product .product-body .product-btns>button .tooltipp {
+.product .product-body .product-btns > button .tooltipp {
   position: absolute;
   bottom: 100%;
   left: 50%;
@@ -159,7 +158,7 @@ const props = defineProps({
   font-size: 12px;
   line-height: 10px;
   background: #1e1f29;
-  color: #FFF;
+  color: #fff;
   text-transform: uppercase;
   z-index: 2;
   opacity: 0;
@@ -168,7 +167,7 @@ const props = defineProps({
   transition: 0.2s all;
 }
 
-.product .product-body .product-btns>button:hover .tooltipp {
+.product .product-body .product-btns > button:hover .tooltipp {
   opacity: 1;
   visibility: visible;
   -webkit-transform: translate(-50%, -5px);
@@ -204,7 +203,7 @@ const props = defineProps({
   height: 40px;
   padding: 0 30px;
   background-color: #ef233c;
-  color: #FFF;
+  color: #fff;
   text-transform: uppercase;
   font-weight: 700;
   border-radius: 40px;
@@ -212,7 +211,7 @@ const props = defineProps({
   transition: 0.2s all;
 }
 
-.add-to-cart .add-to-cart-btn>i {
+.add-to-cart .add-to-cart-btn > i {
   position: absolute;
   left: 0;
   top: 0;
@@ -225,23 +224,22 @@ const props = defineProps({
 }
 
 .add-to-cart .add-to-cart-btn:hover {
-  background-color: #FFF;
+  background-color: #fff;
   color: #0078d4;
   border-color: #0078d4;
   padding: 0px 30px 0px 50px;
 }
 
-.add-to-cart .add-to-cart-btn:hover>i {
+.add-to-cart .add-to-cart-btn:hover > i {
   opacity: 1;
   visibility: visible;
 }
 
 @media (max-width: 639px) {
-
   .product {
     width: 80vw;
   }
-  .img{
+  .img {
     margin: 0 auto;
     height: 214px;
     object-fit: cover;
@@ -259,25 +257,23 @@ const props = defineProps({
 }
 
 @media (min-width: 1024px) {
-
   .product {
     width: 19vw;
-
   }
 
   .img {
     margin: auto;
     width: 12.5vw;
-    height: 12.5vw; 
+    height: 12.5vw;
   }
 }
 </style>
 
 <template>
-  <div class=" mr-8 container-product">
-    <div class="product md:w-[19vw]">
+  <div class="mr-8 container-product">
+    <div class="product md:w-[43vw] w-[19vw] ">
       <div class="product-img">
-        <img :src="images" alt="" class="img"/>
+        <img :src="images" alt="" class="img md:h-[300px] md:mx-auto" />
         <div class="product-label">
           <span class="sale">-{{ descuento || 30 }}%</span>
           <span class="nuevo">{{ condicion || 'nuevo' }}</span>
