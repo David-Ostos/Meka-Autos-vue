@@ -1,20 +1,20 @@
 <template>
-  <div class="bg-[#333333] mx-auto py-5 font-bold font-arial ">
+  <div class="bg-[#333333] mx-auto py-4 font-bold font-arial ">
     <div class="mx-auto flex flex-col">
       <div
-        class="flex justify-center gap-4 lg:hidden"
+        class="flex justify-center items-center gap-4 lg:hidden"
         data-te-collapse-init
         data-te-target="#collapse"
         aria-expanded="false"
         aria-controls="collapse"
       >
-        <p class="uppercase text-white max-w-[84%] text-xl md:text-4xl text-center">
+        <p class="uppercase text-white max-w-[84%] text-xs sm:text-xl md:text-4xl text-center">
           encuentra los repuestos para tu vehiculo
         </p>
         <button
           class="font-medium leading-normal text-white self-baseline"
         >
-          <i class="fa-solid fa-chevron-down md:text-xl sm:text-base" style="color: #ffffff"></i>
+          <i class="fa-solid fa-chevron-down text-xs md:text-xl sm:text-base" style="color: #ffffff"></i>
         </button>
       </div>
       <div
