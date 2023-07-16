@@ -305,9 +305,9 @@
     flex-direction: column;
   }
   .products-widget-slick {
-  -webkit-transform: translateX(-5499px);
-  -ms-transform: translateX(-5499px);
-  transform: translateX(-5499px);
+    -webkit-transform: translateX(-5375px);
+  -ms-transform: translateX(-5375px);
+  transform: translateX(-5375px);
 }
 .action{
   -webkit-transform: translateX(0);
