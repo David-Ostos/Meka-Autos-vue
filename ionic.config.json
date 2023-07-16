@@ -1,0 +1,7 @@
+{
+  "name": "login-vue-ademaas",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "custom"
+}
