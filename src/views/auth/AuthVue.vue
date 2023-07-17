@@ -1,15 +1,15 @@
 <template>
-    <div class="md:container md:px-6 mx-auto max-w-full lg:max-w-[1140px] ">
+    <div class="md:container md:px-6 mx-auto max-w-full lg:max-w-[1140px] font-nunito2">
       <!-- Outer Row -->
       <div class="flex justify-center ">
-        <div class="xl:basis-5/6 lg:basis-full md:basis-3/4 basis-full">
+        <div class="xl:basis-5/6 lg:basis-full md:basis-3/4 basis-full px-4">
           <div class="cardT overflow-hidden border-0 shadow-lg my-12">
             <div class="card-body p-0">
               <!-- Nested Row within Card Body -->
               <div class="flex justify-center mx-3">
                 <div class="lg:basis-3/6 max-w-[50%] hidden lg:block bg-car-login bg-cover bg-[-9rem] px-3"></div>
-                <div class="lg:basis-3/6 lg:max-w-[50%] px-3">
-                  <div class="p-12">
+                <div class="lg:basis-3/6 lg:max-w-[50%] w-full px-3">
+                  <div class="md:p-12 p-[1rem_0] ">
                     <div class="text-center">
                       <h1 class="text-2xl text-gray-700 mb-6">Welcome Back!</h1>
                     </div>
@@ -39,23 +39,23 @@
                           <label class="custom-control-label" for="customCheck">Remember Me</label>
                         </div>
                       </div>
-                      <a href="index.html" class="btn btn-primary btn-user btn-block"
-                      @click.prevent="loginUser"> Login </a>
+                      <burron href="index.html" class="btn btn-primary btn-user btn-block"
+                      @click.prevent="loginUser"> Login </burron>
                       <hr />
-                      <a href="index.html" class="btn btn-google btn-user btn-block"
+                      <burron href="index.html" class="btn btn-google btn-user btn-block"
                       @click.prevent="logInGoogle">
                         <i class="fab fa-google fa-fw"></i> Login with Google
-                      </a>
-                      <a href="index.html" class="btn btn-facebook btn-user btn-block">
+                      </burron>
+                      <burron href="index.html" class="btn btn-facebook btn-user btn-block">
                         <i class="fab fa-facebook-f fa-fw"></i> Login with Facebook
-                      </a>
+                      </burron>
                     </form>
                     <hr />
                     <div class="text-center">
-                      <RouterLink to="/recuperar" class="text-sm font-normal">¿Olvidaste la contraseña?</RouterLink>
+                      <RouterLink :to="{ name: 'recuperar' }" class="text-sm font-normal">¿Olvidaste la contraseña?</RouterLink>
                     </div>
                     <div class="text-center">
-                      <RouterLink to="/registrar" class="text-sm font-normal"> ¡Crear cuenta! </RouterLink>
+                      <RouterLink :to="{ name: 'registrar' }" class="text-sm font-normal"> ¡Crear cuenta! </RouterLink>
                     </div>
                   </div>
                 </div>
@@ -250,23 +250,7 @@ form.user1 .btn-user {
     background-color: #4e73df;
     border-color: #4e73df;
 }
-.btn {
-    display: inline-block;
-    font-weight: 400;
-    color: #858796;
-    text-align: center;
-    vertical-align: middle;
-    -webkit-user-select: none;
-    -moz-user-select: none;
-    user-select: none;
-    background-color: transparent;
-    border: 1px solid transparent;
-    padding: 0.375rem 0.75rem;
-    font-size: 1rem;
-    line-height: 1.5;
-    border-radius: 0.35rem;
-    transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
-}
+
 hr {
     margin-top: 1rem;
     margin-bottom: 1rem;
@@ -276,11 +260,7 @@ hr {
     height: 0;
     overflow: visible;
 }
-.btn-google {
-    color: #fff;
-    background-color: #ea4335;
-    border-color: #fff;
-}
+
 .btn-block + .btn-block {
     margin-top: 0.5rem;
 }
