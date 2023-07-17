@@ -33,10 +33,10 @@
                   </form>
                   <hr />
                   <div class="text-center">
-                    <RouterLink :to="{ name: 'auth' }" class="text-xs">¿Tienes cuenta?</RouterLink>
+                    <RouterLink :to="{ name: 'auth' }" class="text-sm">¿Tienes cuenta?</RouterLink>
                   </div>
                   <div class="text-center">
-                    <RouterLink :to="{ name: 'registrar' }" class="text-xs"> ¡Crear cuenta! </RouterLink>
+                    <RouterLink :to="{ name: 'registrar' }" class="text-sm"> ¡Crear cuenta! </RouterLink>
                   </div>
                 </div>
               </div>
