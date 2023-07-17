@@ -44,17 +44,17 @@ const router = createRouter({
       component: () => import('../views/Pruebas/productVue.vue')
     },
     {
-      path: '/carroHome',
+      path: '/home/carroHome',
       name: 'carroHome',
       component: () => import('../views/home/categorias/carroHome.vue')
     },
     {
-      path: '/motoHome',
+      path: '/home/motoHome',
       name: 'motoHome',
       component: () => import('../views/home/categorias/motoHome.vue')
     },
     {
-      path: '/camionHome',
+      path: '/home/camionHome',
       name: 'camionHome',
       component: () => import('../views/home/categorias/camionHome.vue')
     },

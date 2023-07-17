@@ -1,20 +1,18 @@
 <template>
   <nav class="nav-tipo-vehiculo">
-    <RouterLink class="links-tipo" to="/"><i class="fas fa-car fa-fw me-1"></i>Carros</RouterLink
+    <RouterLink class="links-tipo" :to="{name: 'carroHome'}"><i class="fas fa-car fa-fw me-1"></i>Carros</RouterLink
     >
-    <RouterLink class="links-tipo" to="/motoHome" ><i class="fas fa-motorcycle fa-fw me-1"></i>Motos</RouterLink
+    <RouterLink class="links-tipo" :to="{name: 'motoHome'}" ><i class="fas fa-motorcycle fa-fw me-1"></i>Motos</RouterLink
     >
-    <RouterLink class="links-tipo" to="/camionHome"><i class="fas fa-truck-moving fa-fw me-1"></i>Camiones</RouterLink
+    <RouterLink class="links-tipo" :to="{name : 'camionHome'}"><i class="fas fa-truck-moving fa-fw me-1"></i>Camiones</RouterLink
     >
     <!-- <RouterLink class="links-tipo" to="/"><i class="fas fa-ship fa-fw me-1"></i>Maritimos</RouterLink> -->
   </nav>
 </template>
 
 <script setup lang="ts">
-import { ref } from 'vue';
-import { RouterView, RouterLink } from 'vue-router';
+import { RouterLink } from 'vue-router';
 
-const active = ref(false);
 </script>
 
 <style scoped lang="scss">
