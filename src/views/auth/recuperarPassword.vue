@@ -1,12 +1,12 @@
 <template>
-  <div class="container">
+  <div class="md:container">
     <!-- Outer Row -->
-    <div class="row justify-content-center">
-      <div class="col-xl-10 col-lg-12 col-md-9">
+    <div class="flex flex-wrap mx-3 justify-center">
+      <div class=" mx-3 xl:w-full xl:max-w-[83%] lg:max-w-full md:max-w-[75%] w-full ">
         <div class="card o-hidden border-0 shadow-lg my-5">
           <div class="card-body p-0">
             <!-- Nested Row within Card Body -->
-            <div class="row">
+            <div class="flex flex-wrap mx-3">
               <div class="col-lg-6 d-none d-lg-block bg-password-image"></div>
               <div class="col-lg-6">
                 <div class="p-5">

@@ -7,7 +7,7 @@
     <!-- container -->
     <div class="container">
       <!-- row -->
-      <div class="row">
+      <div class="flex flex-wrap mx-3">
         <!-- section title -->
         <div class="d-flex bd-highlight">
           <div class="p-2 flex-grow-1 bd-highlight">
@@ -21,7 +21,7 @@
 
         <!-- Products tab & slick -->
         <div class="col-md-12">
-          <div class="row">
+          <div class="flex flex-wrap mx-3">
             <div class="products-tabs">
               <!-- tab -->
               <div id="tab1" class="tab-pane active">

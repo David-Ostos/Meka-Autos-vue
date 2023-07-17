@@ -1,5 +1,5 @@
 <template>
-    <div class="container px-6 mx-auto max-w-full lg:max-w-[1140px] ">
+    <div class="md:container md:px-6 mx-auto max-w-full lg:max-w-[1140px] ">
       <!-- Outer Row -->
       <div class="flex justify-center ">
         <div class="xl:basis-5/6 lg:basis-full md:basis-3/4 basis-full">

@@ -10,12 +10,10 @@ export default {
   theme: {
     extend: {
       backgroundImage: {
-        'car-login': "url('./src/assets/sedan-lujo-rojo-carretera.jpg')",
-        'cyber': "url('./src/assets/concepto-seguridad.jpg')",
-        'social': "url('./src/assets/social.jpg')",
-        'carros': "url('./src/img/carro/carro3.jpeg)",
-        'motos': "url('./src/img/moto/moto11.jpg)",
-        'camiones': "url('./src/img/camione/camione1.png)"
+        'car-login': "url('assets/sedan-lujo-rojo-carretera.jpg')",
+        'carros': "url('img/carro/carro3.jpeg)",
+        'motos': "url('img/moto/moto11.jpg)",
+        'camiones': "url('img/camione/camione1.png)"
       },
       fontFamily: {
         roboto: ['Roboto'],

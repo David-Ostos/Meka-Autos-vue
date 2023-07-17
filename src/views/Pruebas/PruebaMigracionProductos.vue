@@ -4,7 +4,7 @@
     <!-- container -->
     <div class="container">
       <!-- row -->
-      <div class="row">
+      <div class="flex flex-wrap mx-3">
         <!-- Product main img -->
         <div class="col-md-5 col-md-push-2">
           <div id="product-main-img">
