@@ -1,6 +1,6 @@
 <template>
   <nav class="nav-tipo-vehiculo">
-    <RouterLink class="links-tipo" :to="{name: 'carroHome'}"><i class="fas fa-car fa-fw me-1"></i>Carros</RouterLink
+    <RouterLink class="links-tipo" :to="{name: 'home'}"><i class="fas fa-car fa-fw me-1"></i>Carros</RouterLink
     >
     <RouterLink class="links-tipo" :to="{name: 'motoHome'}" ><i class="fas fa-motorcycle fa-fw me-1"></i>Motos</RouterLink
     >
