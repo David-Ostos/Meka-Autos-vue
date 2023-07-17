@@ -6,7 +6,7 @@
     >
     <RouterLink class="links-tipo" :to="{name : 'camionHome'}"><i class="fas fa-truck-moving fa-fw me-1"></i>Camiones</RouterLink
     >
-    <!-- <RouterLink class="links-tipo" to="/"><i class="fas fa-ship fa-fw me-1"></i>Maritimos</RouterLink> -->
+    <!-- <RouterLink class="links-tipo" :to="{name : 'maritimoHome'}"><i class="fas fa-ship fa-fw me-1"></i>Maritimos</RouterLink> -->
   </nav>
 </template>
 
