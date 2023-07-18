@@ -111,9 +111,9 @@ const loginUser = async () => {
 
 onMounted(() => {
   GoogleAuth.initialize({
-    clientId: '520770098242-hqplt1fvubopdp5o6csev8es3iu08l3o.apps.googleusercontent.com',
+    clientId: '520770098242-hqplt1fvubopdp5o6csev8es3iu08l3o.apps.googleusercontent.com' ||'520770098242-sd6ud262nemdpqsfcir4jbr4bkf6mne3.apps.googleusercontent.com',
     grantOfflineAccess: true,
-    scopes: ['profile', 'email'],
+    scopes: ['profile', 'email']
 
   });
 });
