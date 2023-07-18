@@ -113,7 +113,8 @@ onMounted(() => {
   GoogleAuth.initialize({
     clientId: '1068404641306-tue5bp8ad2jka12gv3gcg82vjj27epc8.apps.googleusercontent.com',
     grantOfflineAccess: true,
-    scopes: ['profile', 'email']
+    scopes: ['profile', 'email'],
+
   });
 });
 
