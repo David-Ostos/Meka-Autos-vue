@@ -58,12 +58,23 @@
         display: block;
         width: 100%;
     }
-    
     .btn-primary {
+        color: #fff;
+        background-color: #4e73df;
+    }
+    .boton-primary {
         color: #fff;
         background-color: #4e73df;
         border-color: #4e73df;
     }
+    .boton-primary:hover {
+        background-color: #0062ae;
+        border-color: #0062ae;
+    }
+    .boton-primary:active {
+        background-color: #003e6e;
+        border-color: #003e6e;
+      }
     .btn-google {
         color: #fff;
         background-color: #ea4335;

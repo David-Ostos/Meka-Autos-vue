@@ -1,13 +1,16 @@
 <template>
   <div class="cerrarNav" id="cerrarNav">
-    <div class="exit" @click="emit('activeNav')">
-
-    </div>
+    <div class="exit" @click="emit('activeNav')"></div>
     <div id="responsive-nav" class="responsive-nav px-4 w-screen md:w-2/5 max-w-md">
       <div class="container-logo">
         <img src="../../img/user.png" alt="Foto del usuario" width="64" height="64" />
-        <div class="">
-          <a class="btn-exit " href="#"><i @click="emit('activeNav')" class="icon-exit fas fa-times "></i></a>
+        <div class="flex gap-4">
+          <RouterLink :to="{ name: 'auth' }" class="btn boton-primary btn-block py-2 rounded-[10rem] border-[2px] border-white " @click="emit('activeNav')"
+            >Ingresar</RouterLink
+          >
+          <a class="btn-exit" href="#"
+            ><i @click="emit('activeNav')" class="icon-exit  fas fa-times"></i
+          ></a>
         </div>
       </div>
 
@@ -17,110 +20,75 @@
       <div class="scrollable-list scrollbar-cyan">
         <ul class="list-unstyled">
           <li>
-            <button 
-              data-te-ripple-init 
+            <button
+              data-te-ripple-init
               data-te-ripple-color="light"
-              class="btn-categoria btn-primary">
-                <i class="fas fa-home"></i> Inicio
+              class="btn-categoria btn-primary"
+            >
+              <i class="fas fa-home"></i> Inicio
             </button>
           </li>
           <li>
-            <button 
-              data-te-ripple-init 
-              data-te-ripple-color="light"
-              class="btn-categoria btn-dark">
-                <i class="fas fa-bell"></i> Notificaciones
+            <button data-te-ripple-init data-te-ripple-color="light" class="btn-categoria btn-dark">
+              <i class="fas fa-bell"></i> Notificaciones
             </button>
           </li>
           <li>
-            <button 
-              data-te-ripple-init 
-              data-te-ripple-color="light"
-              class="btn-categoria btn-dark">
-                <i class="fas fa-envelope"></i> Mensajes
+            <button data-te-ripple-init data-te-ripple-color="light" class="btn-categoria btn-dark">
+              <i class="fas fa-envelope"></i> Mensajes
             </button>
           </li>
           <hr />
           <h2 class="nav-title">MekAuto</h2>
           <li>
-            <button 
-              data-te-ripple-init 
-              data-te-ripple-color="light"
-              class="btn-categoria btn-dark">
-                <i class="fas fa-star"></i> Lista de favoritos
+            <button data-te-ripple-init data-te-ripple-color="light" class="btn-categoria btn-dark">
+              <i class="fas fa-star"></i> Lista de favoritos
             </button>
           </li>
           <li>
-            <button 
-              data-te-ripple-init 
-              data-te-ripple-color="light"
-              class="btn-categoria btn-dark">
-                <i class="fas fa-bookmark"></i> Guardados
+            <button data-te-ripple-init data-te-ripple-color="light" class="btn-categoria btn-dark">
+              <i class="fas fa-bookmark"></i> Guardados
             </button>
           </li>
           <li>
-            <button 
-              data-te-ripple-init 
-              data-te-ripple-color="light"
-              class="btn-categoria btn-dark">
-                <i class="fas fa-history"></i> Comprar otra vez
+            <button data-te-ripple-init data-te-ripple-color="light" class="btn-categoria btn-dark">
+              <i class="fas fa-history"></i> Comprar otra vez
             </button>
           </li>
           <li>
-            <button 
-              data-te-ripple-init 
-              data-te-ripple-color="light"
-              class="btn-categoria btn-dark">
-                <i class="fas fa-shopping-bag"></i> Compras
+            <button data-te-ripple-init data-te-ripple-color="light" class="btn-categoria btn-dark">
+              <i class="fas fa-shopping-bag"></i> Compras
             </button>
           </li>
           <li>
-            <button 
-              data-te-ripple-init 
-              data-te-ripple-color="light"
-              class="btn-categoria btn-dark">
-                <i class="fas fa-gavel"></i> Subastas y Ofertas
+            <button data-te-ripple-init data-te-ripple-color="light" class="btn-categoria btn-dark">
+              <i class="fas fa-gavel"></i> Subastas y Ofertas
             </button>
           </li>
           <li>
-            <button 
-              data-te-ripple-init 
-              data-te-ripple-color="light"
-              class="btn-categoria btn-dark">
-                <i class="fas fa-dollar-sign"></i> Ventas
+            <button data-te-ripple-init data-te-ripple-color="light" class="btn-categoria btn-dark">
+              <i class="fas fa-dollar-sign"></i> Ventas
             </button>
           </li>
           <hr />
           <li>
-            <button 
-              data-te-ripple-init 
-              data-te-ripple-color="light"
-              class="btn-categoria btn-dark">
-                <i class="fas fa-list"></i> Categorías
+            <button data-te-ripple-init data-te-ripple-color="light" class="btn-categoria btn-dark">
+              <i class="fas fa-list"></i> Categorías
             </button>
           </li>
           <li>
-            <button 
-              data-te-ripple-init 
-              data-te-ripple-color="light"
-              class="btn-categoria btn-dark">
-                <i class="fas fa-tags"></i> Ofertas
+            <button data-te-ripple-init data-te-ripple-color="light" class="btn-categoria btn-dark">
+              <i class="fas fa-tags"></i> Ofertas
             </button>
           </li>
           <li>
-            <button 
-              data-te-ripple-init 
-              data-te-ripple-color="light"
-              class="btn-categoria btn-dark">
-                <i class="fas fa-cog"></i> Configuración
+            <button data-te-ripple-init data-te-ripple-color="light" class="btn-categoria btn-dark">
+              <i class="fas fa-cog"></i> Configuración
             </button>
           </li>
           <li>
-            <button 
-              data-te-ripple-init 
-              data-te-ripple-color="light"
-              class="btn-categoria btn-dark">
-                <i class="fas fa-question-circle"></i> Ayuda
+            <button data-te-ripple-init data-te-ripple-color="light" class="btn-categoria btn-dark">
+              <i class="fas fa-question-circle"></i> Ayuda
             </button>
           </li>
         </ul>
@@ -134,15 +102,11 @@
 <script setup lang="ts">
 import { onMounted } from 'vue';
 import footerPrincipal from './footerPrincipal.vue';
-import {
-  Ripple,
-  initTE,
-} from "tw-elements";
-onMounted(() =>{
+import { Ripple, initTE } from 'tw-elements';
+onMounted(() => {
   initTE({ Ripple });
-})
-const emit = defineEmits(['activeNav'])
-
+});
+const emit = defineEmits(['activeNav']);
 </script>
 
 <style scoped lang="scss">
@@ -204,14 +168,11 @@ hr {
 
   /*max-height: 60vh;*/
   overflow-y: auto;
-
-
 }
 
 .responsive-nav {
   display: flex;
   flex-direction: column;
-
 }
 
 .container-logo {
@@ -223,36 +184,45 @@ hr {
     border-radius: 50%;
   }
 
-  .btn-exit {
-
-    .icon-exit {
-      display: flex;
-      background-color: white;
-      border-color: white;
-      color: #0078d4;
-      border: 2px solid;
-      height: 2.5rem;
-      width: 2.5rem;
-      /* text-align: center; */
-      border-radius: 50%;
-      justify-content: center;
-      align-items: center;
-      transition: all .5s;
-      transform-origin: center;
-    }
+  .icon-exit {
+    display: flex;
+    background-color: #0078d4;
+    border-color: #0078d4;
+    color: #fff;
+    border: 2px solid;
+    height: 2.5rem;
+    width: 2.5rem;
+    /* text-align: center; */
+    border-radius: 50%;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.5s;
+    transform-origin: center;
+  }
+  .btn-login {
+    display: flex;
+    background-color: #0078d4;
+    border-color: #0078d4;
+    color: #fff;
+    border: 2px solid;
+    /* text-align: center; */
+    border-radius: 50%;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.5s;
+    transform-origin: center;
   }
 
   .icon-exit:hover {
     transform: rotate(180deg);
-    background-color: #f3f3f3;
+    background-color: #0062ae;
   }
 
   .icon-exit:active {
-    transition: all .1s;
-    background-color: #aaaaaa;
+    transition: all 0.1s;
+    background-color: #003e6e;
   }
 }
-
 
 .nav-title {
   color: white;
@@ -280,11 +250,13 @@ hr {
   text-decoration: none;
   text-overflow: ellipsis;
   padding: 0.5rem 1.5rem;
-  font-size: .875rem;
+  font-size: 0.875rem;
   line-height: 1.3;
   font-weight: 600;
   border-radius: 20px;
-  transition: color .15s ease-in-out, background-color .15s ease-in-out, border-color .15s ease-in-out, box-shadow .15s ease-in-out, -webkit-box-shadow .15s ease-in-out;
+  transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out,
+    border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out,
+    -webkit-box-shadow 0.15s ease-in-out;
 }
 
 .btn-dark {
@@ -302,8 +274,6 @@ hr {
   border-bottom: 2px solid #e4e7ed;
   border-top: 3px solid #0078d4;
 }
-
-
 
 @media screen and (max-width: 5991px) {
   /*-------------scroll---------------*/

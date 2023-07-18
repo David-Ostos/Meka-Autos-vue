@@ -97,28 +97,6 @@ header {
   }
 }
 
-.boton-primary {
-  color: white;
-  background-color: #0078d4;
-  border-color: #0078d4;
-}
-
-.boton-primary:hover {
-  background-color: #0062ae;
-  border-color: #0062ae;
-}
-
-.boton-primary:active {
-  background-color: #003e6e;
-  border-color: #003e6e;
-}
-
-.boton-secondary {
-  background-color: white;
-  border-color: white;
-  color: #0078d4;
-  border: 2px solid;
-}
 .boton-secondary:hover {
     background-color: #f3f3f3;
   }
@@ -134,7 +112,7 @@ header {
       <div class="container-nav ">
         <div class="">
           <a href="#" class="btn-header" @click="activeNav">
-            <i class="icon-header fas fa-bars boton-secondary"></i>
+            <i class="icon-header fas fa-bars boton-primary"></i>
           </a>
         </div>
 
