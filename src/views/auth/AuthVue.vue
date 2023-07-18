@@ -117,22 +117,30 @@ onMounted(() => {
   });
 });
 
+try {
+  
+} catch (error) {
+  
+}
+
 // en la funcion loginGoogle es donde se reciben los datos
 
 async function logInGoogle() {
   try {
     const response = await GoogleAuth.signIn();
-  } finally {
     router.push({ name: 'home' });
-    /*
-  console.log(response.authentication.accessToken);
-  console.log(response.serverAuthCode);
-  console.log(response.email);
-  console.log(response.familyName);
-  console.log(response.givenName);
-  console.log(response.imageUrl);
-  */
+  } catch (error:any) {
+/*     router.push({ name: 'home' }); */
+    throw new Error(error);
   }
+  /*
+console.log(response.authentication.accessToken);
+console.log(response.serverAuthCode);
+console.log(response.email);
+console.log(response.familyName);
+console.log(response.givenName);
+console.log(response.imageUrl);
+*/
 }
 
 // eslint-disable-next-line @typescript-eslint/no-unused-vars

@@ -13,6 +13,7 @@ const config: CapacitorConfig = {
       scopes: ["profile", "email"],
       serverClientId: "1068404641306-tue5bp8ad2jka12gv3gcg82vjj27epc8.apps.googleusercontent.com",
       forceCodeForRefreshToken: true,
+      clientId: "1068404641306-tue5bp8ad2jka12gv3gcg82vjj27epc8.apps.googleusercontent.com",
     },
   },
 };
