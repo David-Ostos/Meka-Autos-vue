@@ -3,7 +3,7 @@
     <div class="exit" @click="emit('activeNav')">
 
     </div>
-    <div id="responsive-nav" class="responsive-nav px-4">
+    <div id="responsive-nav" class="responsive-nav px-4 w-screen md:w-2/5 max-w-md">
       <div class="container-logo">
         <img src="../../img/user.png" alt="Foto del usuario" width="64" height="64" />
         <div class="">
@@ -17,71 +17,110 @@
       <div class="scrollable-list scrollbar-cyan">
         <ul class="list-unstyled">
           <li>
-            <button class="btn-categoria btn-primary">
-              <i class="fas fa-home"></i> Inicio
+            <button 
+              data-te-ripple-init 
+              data-te-ripple-color="light"
+              class="btn-categoria btn-primary">
+                <i class="fas fa-home"></i> Inicio
             </button>
           </li>
           <li>
-            <button class="btn-categoria btn-dark">
-              <i class="fas fa-bell"></i> Notificaciones
+            <button 
+              data-te-ripple-init 
+              data-te-ripple-color="light"
+              class="btn-categoria btn-dark">
+                <i class="fas fa-bell"></i> Notificaciones
             </button>
           </li>
           <li>
-            <button class="btn-categoria btn-dark">
-              <i class="fas fa-envelope"></i> Mensajes
+            <button 
+              data-te-ripple-init 
+              data-te-ripple-color="light"
+              class="btn-categoria btn-dark">
+                <i class="fas fa-envelope"></i> Mensajes
             </button>
           </li>
           <hr />
           <h2 class="nav-title">MekAuto</h2>
           <li>
-            <button class="btn-categoria btn-dark">
-              <i class="fas fa-star"></i> Lista de favoritos
+            <button 
+              data-te-ripple-init 
+              data-te-ripple-color="light"
+              class="btn-categoria btn-dark">
+                <i class="fas fa-star"></i> Lista de favoritos
             </button>
           </li>
           <li>
-            <button class="btn-categoria btn-dark">
-              <i class="fas fa-bookmark"></i> Guardados
+            <button 
+              data-te-ripple-init 
+              data-te-ripple-color="light"
+              class="btn-categoria btn-dark">
+                <i class="fas fa-bookmark"></i> Guardados
             </button>
           </li>
           <li>
-            <button class="btn-categoria btn-dark">
-              <i class="fas fa-history"></i> Comprar otra vez
+            <button 
+              data-te-ripple-init 
+              data-te-ripple-color="light"
+              class="btn-categoria btn-dark">
+                <i class="fas fa-history"></i> Comprar otra vez
             </button>
           </li>
           <li>
-            <button class="btn-categoria btn-dark">
-              <i class="fas fa-shopping-bag"></i> Compras
+            <button 
+              data-te-ripple-init 
+              data-te-ripple-color="light"
+              class="btn-categoria btn-dark">
+                <i class="fas fa-shopping-bag"></i> Compras
             </button>
           </li>
           <li>
-            <button class="btn-categoria btn-dark">
-              <i class="fas fa-gavel"></i> Subastas y Ofertas
+            <button 
+              data-te-ripple-init 
+              data-te-ripple-color="light"
+              class="btn-categoria btn-dark">
+                <i class="fas fa-gavel"></i> Subastas y Ofertas
             </button>
           </li>
           <li>
-            <button class="btn-categoria btn-dark">
-              <i class="fas fa-dollar-sign"></i> Ventas
+            <button 
+              data-te-ripple-init 
+              data-te-ripple-color="light"
+              class="btn-categoria btn-dark">
+                <i class="fas fa-dollar-sign"></i> Ventas
             </button>
           </li>
           <hr />
           <li>
-            <button class="btn-categoria btn-dark">
-              <i class="fas fa-list"></i> Categorías
+            <button 
+              data-te-ripple-init 
+              data-te-ripple-color="light"
+              class="btn-categoria btn-dark">
+                <i class="fas fa-list"></i> Categorías
             </button>
           </li>
           <li>
-            <button class="btn-categoria btn-dark">
-              <i class="fas fa-tags"></i> Ofertas
+            <button 
+              data-te-ripple-init 
+              data-te-ripple-color="light"
+              class="btn-categoria btn-dark">
+                <i class="fas fa-tags"></i> Ofertas
             </button>
           </li>
           <li>
-            <button class="btn-categoria btn-dark">
-              <i class="fas fa-cog"></i> Configuración
+            <button 
+              data-te-ripple-init 
+              data-te-ripple-color="light"
+              class="btn-categoria btn-dark">
+                <i class="fas fa-cog"></i> Configuración
             </button>
           </li>
           <li>
-            <button class="btn-categoria btn-dark">
-              <i class="fas fa-question-circle"></i> Ayuda
+            <button 
+              data-te-ripple-init 
+              data-te-ripple-color="light"
+              class="btn-categoria btn-dark">
+                <i class="fas fa-question-circle"></i> Ayuda
             </button>
           </li>
         </ul>
@@ -93,9 +132,15 @@
 </template>
 
 <script setup lang="ts">
-import { ref } from 'vue';
+import { onMounted } from 'vue';
 import footerPrincipal from './footerPrincipal.vue';
-
+import {
+  Ripple,
+  initTE,
+} from "tw-elements";
+onMounted(() =>{
+  initTE({ Ripple });
+})
 const emit = defineEmits(['activeNav'])
 
 </script>
@@ -153,7 +198,6 @@ hr {
   top: 0px;
   background: #15161d;
   height: 100vh;
-  max-width: 30%;
   overflow: hidden;
   z-index: 2;
   padding-top: 20px;
