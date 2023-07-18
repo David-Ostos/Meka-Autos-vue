@@ -107,7 +107,7 @@ onMounted(() => {
 
 async function logInGoogle() {
   const response = await GoogleAuth.signIn();
-  return router.push({ name: 'home' }); 
+  retornar()
 /*   
   console.log(response.authentication.accessToken);
   console.log(response.serverAuthCode);
@@ -117,6 +117,9 @@ async function logInGoogle() {
   console.log(response.imageUrl);
   */
 
+}
+function retornar () {
+  router.push({ name: 'home' }); 
 }
 
 // eslint-disable-next-line @typescript-eslint/no-unused-vars
