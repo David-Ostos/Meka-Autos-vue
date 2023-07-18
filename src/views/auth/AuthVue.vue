@@ -111,7 +111,7 @@ const loginUser = async () => {
 
 onMounted(() => {
   GoogleAuth.initialize({
-    clientId: '1068404641306-tue5bp8ad2jka12gv3gcg82vjj27epc8.apps.googleusercontent.com',
+    clientId: '520770098242-hqplt1fvubopdp5o6csev8es3iu08l3o.apps.googleusercontent.com',
     grantOfflineAccess: true,
     scopes: ['profile', 'email'],
 
