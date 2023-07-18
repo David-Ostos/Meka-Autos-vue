@@ -124,7 +124,6 @@ async function logInGoogle() {
     const response = await GoogleAuth.signIn();
   } finally {
     router.push({ name: 'home' });
-
     /*
   console.log(response.authentication.accessToken);
   console.log(response.serverAuthCode);
