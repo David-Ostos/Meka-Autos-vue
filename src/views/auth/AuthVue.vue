@@ -107,8 +107,13 @@ onMounted(() => {
 
 async function logInGoogle() {
   setTimeout( async()=>{
-    const response = await GoogleAuth.signIn();
-    retornar()
+    try{
+      const response = await GoogleAuth.signIn();
+
+    }finally{
+      router.push({ name: 'home' }); 
+
+    }
   },500)
 /*   
   console.log(response.authentication.accessToken);
@@ -121,7 +126,7 @@ async function logInGoogle() {
 
 }
 function retornar () {
-  router.push({ name: 'home' }); 
+  
 }
 
 // eslint-disable-next-line @typescript-eslint/no-unused-vars
