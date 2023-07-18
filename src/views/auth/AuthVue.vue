@@ -122,7 +122,7 @@ onMounted(() => {
 async function logInGoogle() {
   try {
     const response = await GoogleAuth.signIn();
-    alert(JSON.stringify(response))
+    alert("funciona")
     router.push({ name: 'home' });
   } catch (error:any) {
 /*     router.push({ name: 'home' }); */
