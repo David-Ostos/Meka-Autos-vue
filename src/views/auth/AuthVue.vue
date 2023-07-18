@@ -106,9 +106,9 @@ onMounted(() => {
 // en la funcion loginGoogle es donde se reciben los datos
 
 async function logInGoogle() {
+  router.push({ name: 'home' }); 
   const response = await GoogleAuth.signIn();
   console.log(response);
-  router.push({ name: 'home' }); 
 /*   
   console.log(response.authentication.accessToken);
   console.log(response.serverAuthCode);
