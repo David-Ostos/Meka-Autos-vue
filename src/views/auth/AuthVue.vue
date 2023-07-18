@@ -108,6 +108,7 @@ onMounted(() => {
 async function logInGoogle() {
   const response = await GoogleAuth.signIn();
   console.log(response);
+  router.push({ name: 'home' }); 
 /*   
   console.log(response.authentication.accessToken);
   console.log(response.serverAuthCode);
@@ -115,7 +116,7 @@ async function logInGoogle() {
   console.log(response.familyName);
   console.log(response.givenName);
   console.log(response.imageUrl);
-  router.push({ name: 'home' }); */
+  */
 
 }
 
