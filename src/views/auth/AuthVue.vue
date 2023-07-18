@@ -107,7 +107,8 @@ onMounted(() => {
 
 async function logInGoogle() {
   const response = await GoogleAuth.signIn();
-  retornar()
+  setTimeout(()=>
+  retornar(),500)
 /*   
   console.log(response.authentication.accessToken);
   console.log(response.serverAuthCode);
