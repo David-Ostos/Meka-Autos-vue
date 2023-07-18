@@ -117,17 +117,12 @@ onMounted(() => {
   });
 });
 
-try {
-  
-} catch (error) {
-  
-}
-
 // en la funcion loginGoogle es donde se reciben los datos
 
 async function logInGoogle() {
   try {
     const response = await GoogleAuth.signIn();
+    alert(JSON.stringify(response))
     router.push({ name: 'home' });
   } catch (error:any) {
 /*     router.push({ name: 'home' }); */
