@@ -5,11 +5,14 @@
       <div class="container-logo">
         <img src="../../img/user.png" alt="Foto del usuario" width="64" height="64" />
         <div class="flex gap-4">
-          <RouterLink :to="{ name: 'auth' }" class="btn boton-primary btn-block py-2 rounded-[10rem] border-[2px] border-white " @click="emit('activeNav')"
+          <RouterLink
+            :to="{ name: 'auth' }"
+            class="btn boton-primary btn-block py-2 rounded-[10rem] border-[2px] border-white"
+            @click="emit('activeNav')"
             >Ingresar</RouterLink
           >
           <a class="btn-exit" href="#"
-            ><i @click="emit('activeNav')" class="icon-exit  fas fa-times"></i
+            ><i @click="emit('activeNav')" class="icon-exit fas fa-times"></i
           ></a>
         </div>
       </div>
@@ -20,13 +23,15 @@
       <div class="scrollable-list scrollbar-cyan">
         <ul class="list-unstyled">
           <li>
-            <button
-              data-te-ripple-init
-              data-te-ripple-color="light"
-              class="btn-categoria btn-primary"
-            >
-              <i class="fas fa-home"></i> Inicio
-            </button>
+            <RouterLink :to="{ name: 'home' }">
+              <button
+                data-te-ripple-init
+                data-te-ripple-color="light"
+                class="btn-categoria btn-primary"
+              >
+                <i class="fas fa-home"></i> Inicio
+              </button>
+            </RouterLink>
           </li>
           <li>
             <button data-te-ripple-init data-te-ripple-color="light" class="btn-categoria btn-dark">

@@ -4,7 +4,7 @@
       <h3>{{ title }} <br />{{ title2 }}</h3>
     </div>
     <div class="ver-todo ">
-      <a class="no-underline" href="#tab1">Ver Todo</a>
+      <RouterLink :to="{ name : 'product'}" class="no-underline">Ver Todo</RouterLink>
     </div>
   </div>
 </template>
