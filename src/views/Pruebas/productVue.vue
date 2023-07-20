@@ -1,9 +1,9 @@
 <template>
   <HeaderVue />
   <div style="height: 133px"></div>
-  <div class=" px-12 md:px-0 md:container mx-auto my-8 font-roboto">
+  <div class=" px-1 md:px-0 md:container mx-auto my-8 font-roboto">
     <!-- row -->
-    <div class="flex flex-col md:flex-row  gap-3 justify-between mt-0 mx-[calc(1.5rem/-2)]">
+    <div class="flex flex-col md:flex-row  gap-3 justify-between mt-0 sm:mx-[calc(1.5rem/-2)]">
       <!-- Product main img -->
       <div
         class="flex gap-3 flex-col lg:flex-row md:w-1/2 lg:w-3/5 md:left-[16.66667%] px-[calc(1.5rem/2)]"
@@ -136,22 +136,22 @@
             </button>
           </div>
 
-          <ul class="product-btns">
+          <ul class="product-btns flex flex-wrap gap-4 text-xs">
             <li>
               <a href="#"><i class="fa fa-heart-o"></i> añadir a la lista de deseos</a>
             </li>
             <li>
-              <a href="#"><i class="fa fa-exchange"></i> Añadir a comparar</a>
+              <a href="#"><i class="fa fa-exchange "></i> Añadir a comparar</a>
             </li>
           </ul>
 
-          <ul class="product-links">
+          <ul class="product-links flex gap-4">
             <li>Categoria:</li>
             <li><a href="#">Auriculares</a></li>
             <li><a href="#">Accesorios</a></li>
-          </ul>
+          </ul> 
 
-          <ul class="product-links">
+          <ul class="product-links flex gap-4">
             <li>Compartir:</li>
             <li>
               <a href="#"><i class="fa fa-facebook"></i></a>
@@ -369,9 +369,7 @@ ol {
   text-transform: uppercase;
   font-size: 12px;
 }
-.product-btns li + li {
-  margin-left: 15px;
-}
+
 .product-links {
   margin-top: 15px;
 }
@@ -380,9 +378,7 @@ ol {
   text-transform: uppercase;
   font-size: 12px;
 }
-.product-links li + li {
-  margin-left: 10px;
-}
+
 .input-number .qty-up,
 .input-number .qty-down {
   position: absolute;
