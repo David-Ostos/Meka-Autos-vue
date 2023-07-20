@@ -1,61 +1,90 @@
 <template>
   <HeaderVue />
   <div style="height: 133px"></div>
-  <div class="container mx-auto my-8 font-roboto">
+  <div class=" px-12 md:px-0 md:container mx-auto my-8 font-roboto">
     <!-- row -->
-    <div class="flex mt-0 mx-[calc(1.5rem/-2)]">
+    <div class="flex flex-col md:flex-row  gap-3 justify-between mt-0 mx-[calc(1.5rem/-2)]">
       <!-- Product main img -->
-      <div class="md:w-5/12 md:left-[16.66667%] px-[calc(1.5rem/2)]">
-        <div id="product-main-img">
-          <div class="product-preview">
-            <img src="../../img/carro/carro5.jpeg" class="w-full" alt="" />
-          </div>
-        </div>
-      </div>
-      <!-- /Product main img -->
-
-      <!-- Product thumb imgs -->
-      <div class="md:w-1/6 right-[41.66666667%] px-[calc(1.5rem/2)]">
-        <div class="overflow-hidden max-h-[390px]">
-          <div id="product-imgs">
-            <div class="">
+      <div
+        class="flex gap-3 flex-col lg:flex-row md:w-1/2 lg:w-3/5 md:left-[16.66667%] px-[calc(1.5rem/2)]"
+      >
+        <div class="w-full lg:w-[72%]">
+          <div id="product-main-img">
+            <div class="product-preview">
               <img
-                class="m-[0_5px] border-[1px] border-solid border-[#E4E7ED]"
                 src="../../img/carro/carro5.jpeg"
-                alt=""
-              />
-            </div>
-
-            <div class="">
-              <img
-                class="m-[0_5px] border-[1px] border-solid border-[#E4E7ED]"
-                src="../../img/carro/carro5.jpeg"
-                alt=""
-              />
-            </div>
-
-            <div class="">
-              <img
-                class="m-[0_5px] border-[1px] border-solid border-[#E4E7ED]"
-                src="../../img/carro/carro5.jpeg"
-                alt=""
-              />
-            </div>
-
-            <div class="">
-              <img
-                class="m-[0_5px] border-[1px] border-solid border-[#E4E7ED]"
-                src="../../img/carro/carro5.jpeg"
+                ref="imgPrincipal"
+                @load="getimgPrincipalSize"
+                class="w-full"
                 alt=""
               />
             </div>
           </div>
         </div>
+        <!-- /Product main img -->
+
+        <!-- Product thumb imgs -->
+        <div class="right-[41.66666667%] px-[calc(1.5rem/2)]">
+          <div
+            class="overflow-hidden mx-auto"
+            :style="`max-height:calc(${imgSecondaryHeight}px * 3 + 2px); max-width:calc(${imgSecondaryWidth}px * 3 + 2rem)`"
+          >
+            <div
+              id="product-imgs"
+              class=" gap-3 md:gap-0 flex flex-row lg:flex-col"
+              :style="`width:calc(${imgPrincipalWidth}px + ${imgSecondaryWidth}px - 5%)`"
+            >
+              <div class="">
+                <img
+                  class="md:border-[1px] border-solid border-[#E4E7ED]"
+                  :style="`width: calc(${imgPrincipalWidth}px / 2.8) `"
+                  src="../../img/carro/carro5.jpeg"
+                  alt=""
+                  ref="imgSecundary"
+                  @load="getimgPrincipalSize"
+                />
+              </div>
+
+              <div class="">
+                <img
+                  class="border-[1px] border-solid border-[#E4E7ED]"
+                  :style="`width: calc(${imgPrincipalWidth}px / 2.8) `"
+                  src="../../img/carro/carro5.jpeg"
+                  alt=""
+                  ref="imgSecundary"
+                  @load="getimgPrincipalSize"
+                />
+              </div>
+
+              <div class="">
+                <img
+                  class="border-[1px] border-solid border-[#E4E7ED]"
+                  :style="`width: calc(${imgPrincipalWidth}px / 2.8) `"
+                  src="../../img/carro/carro5.jpeg"
+                  alt=""
+                  ref="imgSecundary"
+                  @load="getimgPrincipalSize"
+                />
+              </div>
+
+              <div class="">
+                <img
+                  class="border-[1px] border-solid border-[#E4E7ED]"
+                  :style="`width: calc(${imgPrincipalWidth}px / 2.8) `"
+                  src="../../img/carro/carro5.jpeg"
+                  alt=""
+                  ref="imgSecundary"
+                  @load="getimgPrincipalSize"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- /Product thumb imgs -->
       </div>
-      <!-- /Product thumb imgs -->
 
       <!-- Product details -->
-      <div class="md:w-5/12 px-[calc(1.5rem/2)]">
+      <div class="md:w-1/2 lg:w-2/5 px-[calc(1.5rem/2)]">
         <div class="product-details">
           <h2 class="product-name">EL NOMBRE DEL PRODUCTO VA AQUÍ</h2>
           <div>
@@ -149,10 +178,32 @@
 </template>
 
 <script setup lang="ts">
+import { ref } from 'vue';
 import FooterPrincipal from '../components/footerPrincipal.vue';
 import HeaderVue from '../components/headerVue.vue';
 
 import ProductSlider from '../home/productSlider.vue';
+
+const imgPrincipal: any = ref();
+const imgSecundary: any = ref();
+const imgPrincipalWidth = ref(0);
+const imgSecondaryHeight = ref(0);
+const imgSecondaryWidth = ref(0);
+
+ /*               
+  :style="`max-height:calc(${imgSecondaryHeight}px * 3 + 1px); max-width:${imgPrincipalWidth}px`"
+ */
+const getimgPrincipalSize = () => {
+  imgPrincipalWidth.value = imgPrincipal.value.clientWidth;
+  imgSecondaryHeight.value = imgSecundary.value.clientHeight;
+
+  if(window.innerWidth <= 768){
+    imgSecondaryWidth.value = imgSecundary.value.clientWidth;
+  }else{
+      imgSecondaryWidth.value = imgSecundary.value.clientWidth;
+  }
+};
+window.addEventListener('resize', getimgPrincipalSize);
 </script>
 
 <style scoped lang="scss">
@@ -247,6 +298,9 @@ import ProductSlider from '../home/productSlider.vue';
   margin-right: 15px;
 }
 .add-to-cart {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
   margin-bottom: 30px;
 }
 .qty-label {
