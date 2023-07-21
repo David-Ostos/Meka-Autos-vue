@@ -184,8 +184,8 @@ import HeaderVue from '../components/headerVue.vue';
 
 import ProductSlider from '../home/productSlider.vue';
 
-const imgPrincipal: any = ref();
-const imgSecundary: any = ref();
+const imgPrincipal = ref();
+const imgSecundary = ref();
 const imgPrincipalWidth = ref(0);
 const imgSecondaryHeight = ref(0);
 const imgSecondaryWidth = ref(0);
