@@ -41,24 +41,32 @@
                         <label class="custom-control-label" for="customCheck">Remember Me</label>
                       </div>
                     </div>
-                    <burron
+                    <button
                       href="index.html"
                       class="btn btn-primary btn-user btn-block"
                       @click.prevent="loginUser"
                     >
                       Login
-                    </burron>
+                    </button>
                     <hr />
-                    <burron
+                    <button
                       href="index.html"
                       class="btn btn-google btn-user btn-block"
-                      @click.prevent="logInGoogle"
+                      @click.prevent="storeGoogle.logInGoogle"
                     >
                       <i class="fab fa-google fa-fw"></i> Login with Google
-                    </burron>
-                    <burron href="index.html" class="btn btn-facebook btn-user btn-block">
+                    </button>
+
+                    <div
+                      id="g_id_onload"
+                      data-client_id="520770098242-hqplt1fvubopdp5o6csev8es3iu08l3o.apps.googleusercontent.com"
+                      data-callback="handleCredentialResponse"
+                    ></div>
+                    <div class="g_id_signin" data-type="standard"></div>
+
+                    <button href="index.html" class="btn btn-facebook btn-user btn-block">
                       <i class="fab fa-facebook-f fa-fw"></i> Login with Facebook
-                    </burron>
+                    </button>
                   </form>
                   <hr />
                   <div class="text-center">
@@ -86,12 +94,14 @@ import { onMounted, ref } from 'vue';
 import { GoogleAuth } from '@codetrix-studio/capacitor-google-auth';
 import AuthService from '@/services/AuthService';
 import useAuthStore from '@/store/auth';
+import useAuthGoogleStore from '@/store/authGoogle';
 import router from '@/router';
 
 let email = ref('');
 let password = ref('');
 
 const store = useAuthStore();
+const storeGoogle = useAuthGoogleStore();
 
 const loginUser = async () => {
   const response = await store.login(email.value, password.value);
@@ -111,33 +121,17 @@ const loginUser = async () => {
 
 onMounted(() => {
   GoogleAuth.initialize({
-    clientId: '520770098242-hqplt1fvubopdp5o6csev8es3iu08l3o.apps.googleusercontent.com' ||'520770098242-sd6ud262nemdpqsfcir4jbr4bkf6mne3.apps.googleusercontent.com',
+    clientId: '520770098242-hqplt1fvubopdp5o6csev8es3iu08l3o.apps.googleusercontent.com',
     grantOfflineAccess: true,
     scopes: ['profile', 'email']
-
   });
 });
 
 // en la funcion loginGoogle es donde se reciben los datos
 
-async function logInGoogle() {
-  try {
-    const response = await GoogleAuth.signIn();
-    console.log(response)
-    router.push({ name: 'home' });
-  } catch (error:any) {
-/*     router.push({ name: 'home' }); */
-    throw new Error(error);
-  }
-  /*
-console.log(response.authentication.accessToken);
-console.log(response.serverAuthCode);
-console.log(response.email);
-console.log(response.familyName);
-console.log(response.givenName);
-console.log(response.imageUrl);
-*/
-}
+const singOut = () => {
+  GoogleAuth.signOut;
+};
 
 // eslint-disable-next-line @typescript-eslint/no-unused-vars
 const authUser = async () => {

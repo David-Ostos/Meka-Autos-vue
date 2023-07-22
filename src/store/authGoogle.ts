@@ -1,5 +1,6 @@
 import { GoogleAuth } from "@codetrix-studio/capacitor-google-auth";
 import { defineStore } from "pinia";
+import router from '@/router';
 
 const useAuthGoogleStore= defineStore('authGoogle',{
     state: () =>{
@@ -14,16 +15,23 @@ const useAuthGoogleStore= defineStore('authGoogle',{
     },
     actions: {
         async logInGoogle() {
-            const response = await GoogleAuth.signIn();
-            
-
-            console.log(response)
-            console.log(response.serverAuthCode)
-            console.log(response.email)
-            console.log(response.familyName)
-            console.log(response.givenName)
-            console.log(response.imageUrl)
-            },
+            try {
+              const response = await GoogleAuth.signIn();
+              console.log(response)
+              router.push({ name: 'home' });
+            } catch (error:any) {
+          /*     router.push({ name: 'home' }); */
+              throw new Error(error);
+            }
+            /*
+          console.log(response.authentication.accessToken);
+          console.log(response.serverAuthCode);
+          console.log(response.email);
+          console.log(response.familyName);
+          console.log(response.givenName);
+          console.log(response.imageUrl);
+          */
+          },
             
             async verifications(email: string) {
                 const uriRegister = `${this.baseURl}/auth/register`

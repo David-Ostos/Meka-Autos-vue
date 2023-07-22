@@ -1,8 +1,8 @@
 <script setup lang="ts">
 import NavBar from './navBar.vue';
 
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
 const emit = defineEmits(['activeNav'])
-console.log(emit)
 
 const activeNav = () => {
   // @ts-ignore: Object is possibly 'null'.
