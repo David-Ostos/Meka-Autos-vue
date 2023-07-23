@@ -24,7 +24,7 @@
                         aria-describedby="emailHelp"
                         placeholder="Enter Email Address..."
                         v-model="email"
-                      />
+                      >
                     </div>
                     <div class="form-group mb-4">
                       <input
@@ -56,13 +56,6 @@
                     >
                       <i class="fab fa-google fa-fw"></i> Login with Google
                     </button>
-
-                    <div
-                      id="g_id_onload"
-                      data-client_id="520770098242-hqplt1fvubopdp5o6csev8es3iu08l3o.apps.googleusercontent.com"
-                      data-callback="handleCredentialResponse"
-                    ></div>
-                    <div class="g_id_signin" data-type="standard"></div>
 
                     <button href="index.html" class="btn btn-facebook btn-user btn-block">
                       <i class="fab fa-facebook-f fa-fw"></i> Login with Facebook
@@ -103,6 +96,7 @@ let password = ref('');
 const store = useAuthStore();
 const storeGoogle = useAuthGoogleStore();
 
+email.value = storeGoogle.user.email;
 const loginUser = async () => {
   const response = await store.login(email.value, password.value);
   if (response === false) {

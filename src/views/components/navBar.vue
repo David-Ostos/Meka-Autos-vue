@@ -10,7 +10,9 @@
             class="btn boton-primary btn-block py-2 rounded-[10rem] border-[2px] border-white"
             @click="emit('activeNav')"
             >Ingresar</RouterLink
-          >
+            >
+            <button class="btn boton-primary btn-block py-2 rounded-[10rem] border-[2px] border-white"
+            @click="storeGoogle.logout"> Logout </button>
           <a class="btn-exit" href="#"
             ><i @click="emit('activeNav')" class="icon-exit fas fa-times"></i
           ></a>
@@ -108,10 +110,14 @@
 import { onMounted } from 'vue';
 import footerPrincipal from './footerPrincipal.vue';
 import { Ripple, initTE } from 'tw-elements';
+import useAuthGoogleStore from '@/store/authGoogle';
+
+const storeGoogle = useAuthGoogleStore();
 onMounted(() => {
   initTE({ Ripple });
 });
 const emit = defineEmits(['activeNav']);
+
 </script>
 
 <style scoped lang="scss">
