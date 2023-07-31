@@ -22,13 +22,45 @@ export default defineConfig({
   plugins: [
     vue(),
     VitePWA({
+      includeAssets: ['favicon.ico', 'apple-touch-icon-180x180.png','mask-icon-512x512.png'],
+      manifest: {
+        name: 'Meka Auto',
+        short_name: 'MekaAuto',
+        description:'Consigue el respuesto que necesitas, rapido y al mejor precio',
+        theme_color: '#ffffff',
+        icons: [
+          {
+            src: 'pwa-64x64.png',
+            sizes: '64x64',
+            type: 'image/png'
+          },
+          {
+            src: 'pwa-192x192.png',
+            sizes: '192x192',
+            type: 'image/png'
+          },
+          {
+            src: 'pwa-512x512.png',
+            sizes: '512x512',
+            type: 'image/png',
+            purpose: 'any'  
+          },
+          {
+            src: 'maskable-icon-512x512.png',
+            sizes: '512x512',
+            type: 'image/png',
+            purpose: 'maskable'
+          }
+        ]
+      },
       registerType: 'autoUpdate',
       injectRegister: 'auto',
       workbox: {
         globPatterns: ['**/*.{js,css,html,ico,png,svg}']
       },
       devOptions: {
-        enabled: true
+        enabled: true,
+
       }
     })
   ],

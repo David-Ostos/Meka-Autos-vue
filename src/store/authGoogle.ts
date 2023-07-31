@@ -19,7 +19,6 @@ const useAuthGoogleStore = defineStore('authGoogle', {
       try {
         const response = await GoogleAuth.signIn();
         router.push({ name: 'home' });
-        this.refresh()
         this.user = response
         console.log(this.user);
         console.log(this.user.email);
